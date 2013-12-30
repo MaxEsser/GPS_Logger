@@ -1,4 +1,6 @@
-## This is the code for a Teensy 2.0 Arduino hybrid GPS Logger. 
+## This is the code for a Teensy 2.0 Arduino hybrid GPS Logger.     
+## Special note: Use the arduino software provide in the software folder of this repo. It already has 
+## the Teensy 2.0 and AltraSoftSerial libraries installed and is a standalone version so no installation.
 ***************************************************************************************************
 In order for the code to be compiled right you need to change the setting in the arduino software 
 1: go to tools>board>Teensy 2.0
