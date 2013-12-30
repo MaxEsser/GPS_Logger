@@ -1,5 +1,10 @@
 ## This is the code for a Teensy 2.0 Arduino hybrid GPS Logger. 
-
+***************************************************************************************************
+In order for the code to be compiled right you need to change the setting in the arduino software 
+1: go to tools>board>Teensy 2.0
+2: tools>USB type>Disk(SD Card) + Keybaord
+3: tools>CPU Speed>8Mhz
+***************************************************************************************************
 This uses the arduino software to code the Teensy 2.0. 
 Its bassed off C and if more info needed you can check out http://arduino.cc/en/Tutorial/HomePage
 
@@ -8,9 +13,9 @@ Basic design description.
 The board has a PA6B GPS module mounted on a circut board along with a teensy 2.0 dev board the GPS module recieves the NMEA sentence and then stores the data 
 on the sdcard in a file named GPSLOGOx.txt which then can easily be converted to a KML format with NMEA to KMZ file converter or use gpsvisualizer.com and everytrail.com
 
-		*******************
-		*       Bugs      *
-		*******************
+			   *******************
+			   *       Bugs      *
+			   *******************
 
 When the GPS_Logger.ino file is veryfied in the arduino software the compiler comes back with a error.
 
