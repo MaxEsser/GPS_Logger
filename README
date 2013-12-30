@@ -1,3 +1,6 @@
+## Update: Found that GPS_Logger complies with no errors if ADCSRA = 0; is removed. So we just need to figure 
+why the compiler is not likeing the ASCSRA line.
+
 ## This is the code for a Teensy 2.0 Arduino hybrid GPS Logger.     
 ## Special note: Use the arduino software provide in the software folder of this repo. It already has 
 ## the Teensy 2.0 and AltraSoftSerial libraries installed and is a standalone version so no installation.
