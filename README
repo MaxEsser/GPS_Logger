@@ -8,9 +8,9 @@ Basic design description.
 The board has a PA6B GPS module mounted on a circut board along with a teensy 2.0 dev board the GPS module recieves the NMEA sentence and then stores the data 
 on the sdcard in a file named GPSLOGOx.txt which then can easily be converted to a KML format with NMEA to KMZ file converter or use gpsvisualizer.com and everytrail.com
 
-							*******************
-							*       Bugs      *
-						        *******************
+		*******************
+		*       Bugs      *
+		*******************
 
 When the GPS_Logger.ino file is veryfied in the arduino software the compiler comes back with a error.
 
@@ -22,9 +22,9 @@ When the GPS_Logger.ino file is veryfied in the arduino software the compiler co
 
 GPS_Logger:10: means something is wrong with line 10 in the code I have no idea what is wrong line states "ADCSRA = 0; // which shut off ADC 
 
-						*****************************
-						*      	    ADC		    *
-						*****************************
+			*****************************
+			*      	    ADC		    *
+			*****************************
 
 This section is to provide more info on ADC. The Teensy 2.0 has a 10 bit analog to digital convertor (ADC) which can 
 be used to read analog voltages, such as signals from sensors.
