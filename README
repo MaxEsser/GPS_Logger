@@ -1,1 +1,34 @@
-## This is the code for a Teensy 2.0 dev board from PJRC.
+## This is the code for a Teensy 2.0 Arduino hybrid GPS Logger. 
+
+This uses the arduino software to code the Teensy 2.0. 
+Its bassed off C and if more info needed you can check out http://arduino.cc/en/Tutorial/HomePage
+
+Basic design description.
+
+The board has a PA6B GPS module mounted on a circut board along with a teensy 2.0 dev board the GPS module recieves the NMEA sentence and then stores the data 
+on the sdcard in a file named GPSLOGOx.txt which then can easily be converted to a KML format with NMEA to KMZ file converter or use gpsvisualizer.com and everytrail.com
+
+							*******************
+							*       Bugs      *
+						        *******************
+
+When the GPS_Logger.ino file is veryfied in the arduino software the compiler comes back with a error.
+
+    Arduino: 1.0.5 (Linux), Board: "Teensy 2.0"
+    /home/max/GPS_Logger/Software/arduino-1.0.5/hardware/tools/avr/bin/avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega32u4 -DF_CPU=8000000L -MMD -DUSB_VID=null -DUSB_PID=null -DARDUINO=105 -DTEENSYDUINO=117 -felide-constructors -std=c++0x -DUSB_DISK_SDFLASH -DLAYOUT_US_ENGLISH -I/home/max/GPS_Logger/Software/arduino-1.0.5/hardware/teensy/cores/teensy -I/home/max/GPS_Logger/Software/arduino-1.0.5/libraries/SD -I/home/max/GPS_Logger/Software/arduino-1.0.5/libraries/AltSoftSerial /tmp/build5837510631375378295.tmp/GPS_Logger.cpp -o /tmp/build5837510631375378295.tmp/GPS_Logger.cpp.o 
+    GPS_Logger:10: error: expected unqualified-id before ‘volatile’
+    GPS_Logger:10: error: expected `)' before ‘volatile’
+    GPS_Logger:10: error: expected `)' before ‘volatile’
+
+GPS_Logger:10: means something is wrong with line 10 in the code I have no idea what is wrong line states "ADCSRA = 0; // which shut off ADC 
+
+						*****************************
+						*      	    ADC		    *
+						*****************************
+
+This section is to provide more info on ADC. The Teensy 2.0 has a 10 bit analog to digital convertor (ADC) which can 
+be used to read analog voltages, such as signals from sensors.
+
+Sample code for interacting with ADC for the teensy can be accesed here https://pjrc.com/teensy/adc.html
+
+
